@@ -50,3 +50,15 @@ class Pet:
                 f"{'ANIMAL TYPE': <20}"
                 f"{'AGE': <10}\n"
             )
+
+        file.write("-" * 60 + "\n")
+
+        for pet in pets:
+            if pet.get_animal_type() == animal:
+                file.write(
+                    f"{pet.get_name():<25}"
+                    f"{pet.get_animal_type():<20}"
+                    f"{pet.get_age():<10}\n"
+                )
+
+        file.write("\n")
