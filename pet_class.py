@@ -30,7 +30,7 @@ class Pet:
         self.__animal_type = input("Enter animal type: ")
         self.__age = input("Enter age: ")
 
-    def save_to_file(self):
+    def save_to_file(self, pets):
         with open("pet_records.txt", "a") as file:
             file.write("=" * 60 + "\n")
             file.write(" " * 15 + "PET RECORDS\n")
@@ -51,14 +51,14 @@ class Pet:
                 f"{'AGE': <10}\n"
             )
 
-        file.write("-" * 60 + "\n")
+            file.write("-" * 60 + "\n")
 
-        for pet in pets:
-            if pet.get_animal_type() == animal:
-                file.write(
-                    f"{pet.get_name():<25}"
-                    f"{pet.get_animal_type():<20}"
-                    f"{pet.get_age():<10}\n"
-                )
+            for pet in pets:
+                if pet.get_animal_type() == animal:
+                    file.write(
+                        f"{pet.get_name():<25}"
+                        f"{pet.get_animal_type():<20}"
+                        f"{pet.get_age():<10}\n"
+                    )
 
-        file.write("\n")
+            file.write("\n")
