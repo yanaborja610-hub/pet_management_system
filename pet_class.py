@@ -23,3 +23,9 @@ class Pet:
 
     def get_age(self):
         return self.__age
+
+    # For input
+    def input_pet(self):
+        self.__name = input("Enter pet name: ")
+        self.__animal_type = input("Enter animal type: ")
+        self.__age = input("Enter age: ")
