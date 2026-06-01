@@ -43,28 +43,29 @@ class Pet:
                 animal_types.append(pet.get_animal_type())
 
         with open("pet_records.txt", "a") as file:
-            file.write("=" * 60 + "\n")
-            file.write(" " * 15 + "PET RECORDS\n")
-            file.write("=" * 60 + "\n")
+            if file.tell() == 0:
+                file.write("=" * 60 + "\n")
+                file.write(" " * 15 + "PET RECORDS\n")
+                file.write("=" * 60 + "\n")
 
 
-            for animal in animal_types:
-                file.write(f"\n{animal.upper()}S\n")
-                file.write("-" * 60 + "\n")
-                file.write(
-                    f"{'PET NAME': <25}"
-                    f"{'ANIMAL TYPE': <20}"
-                    f"{'AGE': <10}\n"
-                )
+                for animal in animal_types:
+                    file.write(f"\n{animal.upper()}S\n")
+                    file.write("-" * 60 + "\n")
+                    file.write(
+                        f"{'PET NAME': <25}"
+                        f"{'ANIMAL TYPE': <20}"
+                        f"{'AGE': <10}\n"
+                    )
 
-                file.write("-" * 60 + "\n")
+                    file.write("-" * 60 + "\n")
 
-                for pet in pets:
-                    if pet.get_animal_type() == animal:
-                        file.write(
-                            f"{pet.get_name():<25}"
-                            f"{pet.get_animal_type():<20}"
-                            f"{pet.get_age():<10}\n"
-                        )
+                    for pet in pets:
+                        if pet.get_animal_type() == animal:
+                            file.write(
+                                f"{pet.get_name():<25}"
+                                f"{pet.get_animal_type():<20}"
+                                f"{pet.get_age():<10}\n"
+                            )
 
-                file.write("\n")
+                    file.write("\n")
