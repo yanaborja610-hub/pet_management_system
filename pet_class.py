@@ -32,8 +32,6 @@ class Pet:
 
     def save_to_file(self):
         with open("pet_records.txt", "a") as file:
-            file.write(
-                f"{self.__name}, "
-                f"{self.__animal_type}, "
-                f"{self.__age}\n"
-            )
+            file.write("=" * 60 + "\n")
+            file.write(" " * 15 + "PET RECORDS\n")
+            file.write("=" * 60 + "\n")
