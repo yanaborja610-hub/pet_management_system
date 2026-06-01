@@ -35,3 +35,9 @@ class Pet:
             file.write("=" * 60 + "\n")
             file.write(" " * 15 + "PET RECORDS\n")
             file.write("=" * 60 + "\n")
+
+    animal_types = []
+
+    for pet in pets:
+        if pet.get_animal_type() not in animal_types:
+            animal_types.append(pet.get_animal_type())
