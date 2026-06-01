@@ -13,3 +13,12 @@ for i in range(number):
     pet.input_pet()
     pets.append(pet)
     pet.save_to_file()
+
+print("\nPET RECORDS")
+print("-" * 30)
+
+for pet in pets:
+    pet.display_pet()
+    print("-" * 30)
+
+print("Records saved to pets.txt")
