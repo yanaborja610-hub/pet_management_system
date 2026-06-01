@@ -29,3 +29,11 @@ class Pet:
         self.__name = input("Enter pet name: ")
         self.__animal_type = input("Enter animal type: ")
         self.__age = input("Enter age: ")
+
+    def save_to_file(self):
+        with open("pet_records.txt", "a") as file:
+            file.write(
+                f"{self.__name}, "
+                f"{self.__animal_type}, "
+                f"{self.__age}\n"
+            )
