@@ -22,4 +22,4 @@ for pet in pets:
     pet.display_pet()
     print("-" * 30)
 
-print("Records saved to pets.txt")
+print("Records saved to pet_records.txt")
