@@ -41,3 +41,12 @@ class Pet:
         for pet in pets:
             if pet.get_animal_type() not in animal_types:
                 animal_types.append(pet.get_animal_type())
+
+        for animal in animal_types:
+            file.write(f"\n{animal.upper()}S\n")
+            file.write("-" * 60 + "\n")
+            file.write(
+                f"{'PET NAME': <25}"
+                f"{'ANIMAL TYPE': <20}"
+                f"{'AGE': <10}\n"
+            )
