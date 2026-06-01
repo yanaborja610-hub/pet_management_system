@@ -4,4 +4,12 @@ pets = []
 
 print("🐾 PET RECORDS 🐾")
 
-num = int(input("How many pets?"))
+number = int(input("How many pets?"))
+
+for i in range(number):
+    print(f"\nPet #{i+1}")
+
+    pet = Pet()
+    pet.input_pet()
+    pets.append(pet)
+    pet.save_to_file()
