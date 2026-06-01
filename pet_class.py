@@ -36,18 +36,17 @@ class Pet:
         print(f"Age: {self.__age}")
 
     def save_to_file(pets):
-        animal_types = []
-
-        for pet in pets:
-            if pet.get_animal_type() not in animal_types:
-                animal_types.append(pet.get_animal_type())
-
         with open("pet_records.txt", "a") as file:
             if file.tell() == 0:
                 file.write("=" * 60 + "\n")
                 file.write(" " * 15 + "PET RECORDS\n")
                 file.write("=" * 60 + "\n")
 
+            animal_types = []
+
+            for pet in pets:
+                if pet.get_animal_type() not in animal_types:
+                    animal_types.append(pet.get_animal_type())
 
                 for animal in animal_types:
                     file.write(f"\n{animal.upper()}S\n")
