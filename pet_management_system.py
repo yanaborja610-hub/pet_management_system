@@ -12,7 +12,8 @@ for i in range(number):
     pet = Pet()
     pet.input_pet()
     pets.append(pet)
-    pet.save_to_file()
+
+Pet.save_to_file(pets)
 
 print("\nPET RECORDS")
 print("-" * 30)
